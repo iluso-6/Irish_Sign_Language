@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="360.0" prefWidth="460.0" style="-fx-background-color: #60989e; -fx-border-color: #42686c;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="signlanguage.FXMLDocumentController">
+  <columnConstraints>
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="145.0" minWidth="10.0" prefWidth="37.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="272.0" minWidth="10.0" prefWidth="188.0" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="301.0" minWidth="10.0" prefWidth="192.0" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="166.0" minWidth="10.0" prefWidth="41.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints maxHeight="133.0" minHeight="9.0" prefHeight="34.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="24.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="276.0" minHeight="10.0" prefHeight="252.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="37.0" minHeight="10.0" prefHeight="24.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="24.0" minHeight="10.0" prefHeight="19.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <ImageView fx:id="front" fitHeight="250.0" fitWidth="250.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+         <image>
+            <Image url="@../img/as.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="prev" alignment="CENTER" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onAction="#handleButtonAction" prefHeight="25.0" prefWidth="50.0" style="-fx-background-color: orange; -fx-background-radius: 6;" text="Prev" translateX="-15.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3">
+         <GridPane.margin>
+            <Insets left="24.0" />
+         </GridPane.margin>
+      </Button>
+      <Button fx:id="next" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleButtonAction" prefWidth="50.0" style="-fx-background-color: lightgreen; -fx-background-radius: 6;" text="Next" translateX="15.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+         <GridPane.margin>
+            <Insets right="26.0" />
+         </GridPane.margin>
+      </Button>
+      <ImageView fx:id="back" fitHeight="250.0" fitWidth="250.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+         <image>
+            <Image url="@../img/a.png" />
+         </image>
+      </ImageView>
+      <MenuButton fx:id="menu" alignment="TOP_LEFT" mnemonicParsing="false" prefHeight="14.0" prefWidth="32.0" style="-fx-background-color: #b4ced9;" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+        <items>
+          <MenuItem mnemonicParsing="false" onAction="#handleMenuReset" text="RESET" />
+          <MenuItem mnemonicParsing="false" onAction="#handleMenuExit" text="EXIT" />
+        </items>
+         <GridPane.margin>
+            <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+         </GridPane.margin>
+      </MenuButton>
+      <Button fx:id="play" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#handlePlayRequest" prefHeight="25.0" prefWidth="56.0" style="-fx-background-color: #9cd5ec; -fx-background-radius: 6;" text="Play" GridPane.columnIndex="1" GridPane.halignment="CENTER" />
+      <TextField fx:id="textbox" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="25.0" prefWidth="190.0" promptText="some text here..." style="-fx-background-color: #d8eef7;" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+         <GridPane.margin>
+            <Insets left="60.0" />
+         </GridPane.margin>
+         <font>
+            <Font size="13.0" />
+         </font>
+      </TextField>
+   </children>
+</GridPane>
